@@ -4,6 +4,7 @@ import { MdMenu } from "react-icons/md";
 
 const navLinks = [
   { label: "About", href: "#about" },
+  { label: "Skills", href: "#skills" },
   { label: "Projects", href: "#projects" },
   { label: "Contact", href: "#contact" },
 ];
@@ -13,13 +14,13 @@ const Navbar = () => {
   return (
     <header className="sticky w-full top-0 z-50 border-b border-neutral-800 bg-neutral-950/40 backdrop-blur">
       <div className="mx-auto flex max-w-5xl items-center justify-between px-4 py-4">
-        <a href="#" className="text-lg font-semibold tracking-tight text-white">
+        <a
+          href="#"
+          className="text-lg font-semibold tracking-tight text-white hover:text-primary"
+        >
           <span className="text-neutral-400">&lt;</span>
           AS
           <span className="text-neutral-400"> /&gt;</span>
-        </a>
-        <a href="#" className="text-sm font-semibold tracking-wide text-white">
-          starkman.dev
         </a>
 
         <nav className="hidden items-center gap-6 text-sm text-neutral-300 md:flex">
@@ -27,9 +28,10 @@ const Navbar = () => {
             <a
               key={link.label}
               href={link.href}
-              className="transition hover:text-white"
+              className="text-sm font-medium text-neutral-400 hover:text-white transition-colors relative group"
             >
               {link.label}
+              <span className="absolute -bottom-1 left-0 w-0 h-px bg-primary transition-all duration-300 group-hover:w-full" />
             </a>
           ))}
         </nav>
