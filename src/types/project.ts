@@ -3,5 +3,7 @@ export type Project = {
   description: string;
   tech: string[];
   githubUrl: string;
+  imgPath: string;
+  imgAlt: string;
   liveUrl?: string;
 };
