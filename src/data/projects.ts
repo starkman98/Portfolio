@@ -1,4 +1,4 @@
-import type { Project } from "../types/Project";
+import type { Project } from "../types/project";
 import twitchwatcherImg from "../assets/screenshots/twitchwatcher.png";
 import blackjackImg from "../assets/screenshots/blackjack.png";
 import packerlabImg from "../assets/screenshots/packerlab.png";
