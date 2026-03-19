@@ -7,17 +7,16 @@ on:
 
 jobs:
   build-and-deploy:
-    runs-on: ubuntu-latest
+    runs-on: [self-hosted, linux, portfolio]
 
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
 
-      - name: Setup Node.js
+      - name: Setup Node
         uses: actions/setup-node@v4
         with:
           node-version: 20
-          cache: npm
 
       - name: Install dependencies
         run: npm ci
@@ -25,27 +24,6 @@ jobs:
       - name: Build project
         run: npm run build
 
-      - name: Upload build files to server temp directory
-        uses: appleboy/scp-action@v1
-        with:
-          host: ${{ secrets.HOST }}
-          username: ${{ secrets.USERNAME }}
-          key: ${{ secrets.SSH_KEY }}
-          port: ${{ secrets.PORT }}
-          source: "dist/*"
-          target: "/tmp/portfolio-deploy"
-
-      - name: Replace production files
-        uses: appleboy/ssh-action@v1
-        with:
-          host: ${{ secrets.HOST }}
-          username: ${{ secrets.USERNAME }}
-          key: ${{ secrets.SSH_KEY }}
-          port: ${{ secrets.PORT }}
-          script: |
-            mkdir -p /var/www/portfolio
-            rm -rf /var/www/portfolio/*
-            cp -r /tmp/portfolio-deploy/dist/* /var/www/portfolio/
-            find /var/www/portfolio -type d -exec chmod 755 {} \;
-            find /var/www/portfolio -type f -exec chmod 644 {} \;
-            rm -rf /tmp/portfolio-deploy
+      - name: Deploy to nginx server
+        run: |
+          rsync -avz --delete dist/ portfolio-deploy@192.168.50.120:/var/www/portfolio/
