@@ -7,6 +7,9 @@ import {
   BsCpu,
   BsShield,
   BsLightbulb,
+  BsCheckCircle,
+  BsRocket,
+  BsListCheck,
 } from "react-icons/bs";
 
 const iconMap: Record<string, React.ComponentType<{ className?: string }>> = {
@@ -17,6 +20,9 @@ const iconMap: Record<string, React.ComponentType<{ className?: string }>> = {
   cpu: BsCpu,
   shield: BsShield,
   lightbulb: BsLightbulb,
+  checkcircle: BsCheckCircle,
+  rocket: BsRocket,
+  listcheck: BsListCheck,
 };
 
 const Skills = () => {
@@ -24,7 +30,7 @@ const Skills = () => {
     <section id="skills" className="px-4 py-16 md:px-8 md:py-24">
       <div className="mx-auto max-w-5xl">
         <p className="mb-3 text-sm font-medium uppercase tracking-widest text-primary font-mono">
-          Skills
+          [ Skills ]
         </p>
         <h2 className="text-3xl font-bold tracking-tight md:text-4xl">
           Technologies &amp; tools

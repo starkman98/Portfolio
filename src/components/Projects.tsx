@@ -6,24 +6,30 @@ const Projects = () => {
     <section id="projects" className="px-4 py-16 md:px-8 md:py-24">
       <div className="mx-auto max-w-5xl">
         <p className="mb-3 text-sm font-medium uppercase tracking-widest text-primary font-mono">
-          Projects
+          [ Projects ]
         </p>
         <h2 className="text-3xl font-bold tracking-tight md:text-4xl">
           My recent projects
         </h2>
 
-        <div className="mt-10 grid grid-cols-1 gap-6 md:grid-cols-2">
+        <div className="mt-10 grid grid-cols-1 gap-5 md:grid-cols-2">
           {projects.map((project) => (
             <article
               key={project.title}
-              className="overflow-hidden rounded-2xl border border-neutral-800 bg-neutral-900/50 p-6 hover:border-neutral-700 transition-all duration-300"
+              className="overflow-hidden rounded-2xl border border-neutral-800 bg-neutral-900/50 p-6 hover:border-primary/50 hover:bg-primary/5 transition-all duration-300"
             >
               <div className="aspect-video w-full overflow-hidden rounded-xl">
-                <img
-                  src={project.imgPath}
-                  alt={project.imgAlt}
-                  className="h-full w-full"
-                />
+                <a
+                  href={project.imgPath}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <img
+                    src={project.imgPath}
+                    alt={project.imgAlt}
+                    className="h-full w-full"
+                  />
+                </a>
               </div>
               <h3 className="mt-4 text-base font-bold leading-6 text-white">
                 {project.title}
@@ -41,15 +47,23 @@ const Projects = () => {
                   </span>
                 ))}
               </div>
-              <a
-                href={project.githubUrl}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="mt-6 inline-flex items-center gap-2 text-sm font-medium text-white hover:text-primary transition-colors duration-200"
-              >
-                <BsGithub className="w-4 h-4" />
-                <span>View on GitHub</span>
-              </a>
+              <div className="flex justify-between">
+                <a
+                  href={project.githubUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="mt-6 inline-flex items-center gap-2 text-sm font-medium text-white hover:text-primary transition-colors duration-200"
+                >
+                  <BsGithub className="w-4 h-4" />
+                  <span>View on GitHub</span>
+                </a>
+
+                {project.schoolAssignment ? (
+                  <span className="mt-6 rounded-full border border-primary/30 bg-primary/10 px-3 py-1 text-xs text-primary/80">
+                    School assignment
+                  </span>
+                ) : null}
+              </div>
             </article>
           ))}
         </div>

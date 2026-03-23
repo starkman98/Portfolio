@@ -5,14 +5,14 @@ import { LuChevronDown } from "react-icons/lu";
 
 const Hero = () => {
   return (
-    <section className="relative min-h-[55vh] flex items-center justify-center overflow-hidden">
+    <section className="relative min-h-[55vh] print:min-h-0 flex items-center justify-center overflow-hidden">
       <div className="absolute inset-0 hero-glow pointer-events-none" />
 
-      <div className="section-container relative z-10 py-12 w-full">
-        <div className="flex flex-col lg:flex-row items-center gap-8 lg:gap-12">
+      <div className="section-container relative z-10 py-12 print:py-4 w-full">
+        <div className="flex flex-col lg:flex-row print:flex-row items-center gap-8 lg:gap-12 print:gap-8">
           {/* Profile image with corner bracket decorations */}
-          <div className="relative animate-fade-up flex-shrink-0">
-            <div className="relative w-56 h-56 md:w-72 md:h-72 rounded-2xl overflow-hidden glow-effect">
+          <div className="relative animate-fade-up shrink-0">
+            <div className="relative w-56 h-56 md:w-72 md:h-72 print:w-40 print:h-40 rounded-2xl overflow-hidden glow-effect">
               <img
                 src={profileImg}
                 alt="Anton Stark"
@@ -27,20 +27,21 @@ const Hero = () => {
           {/* Text content */}
           <div className="flex-1 text-center lg:text-left">
             <div className="animate-fade-up">
-              <div className="flex flex-wrap items-center justify-center gap-3 text-sm tracking-wider mb-3 text-primary font-mono lg:justify-start">
+              <div className="flex flex-wrap items-center justify-center gap-3 text-sm tracking-wider mb-3 text-primary font-mono lg:justify-start print:justify-start">
                 <span>.NET-student | Fullstack Developer</span>
                 <span className="text-neutral-400">— Sweden</span>
               </div>
-              <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold tracking-tight mb-4">
+              <h1 className="text-5xl md:text-6xl lg:text-7xl print:text-5xl font-bold tracking-tight mb-4">
                 Anton Stark
               </h1>
-              <p className="text-xl md:text-2xl text-neutral-400 max-w-xl mb-8 leading-relaxed">
-                CNC machinist to developer, building .NET &amp; React apps with
-                a passion for technology.
+              <p className="text-xl md:text-2xl print:text-lg text-neutral-400 max-w-xl mb-8 print:mb-4 leading-relaxed">
+                Former CNC technician with a strong technical background, now
+                transitioning into software development with a focus on .NET and
+                fullstack development.
               </p>
             </div>
 
-            <div className="flex flex-wrap gap-4 justify-center lg:justify-start animate-fade-up-delay">
+            <div className="flex flex-wrap gap-4 justify-center lg:justify-start print:justify-start animate-fade-up-delay">
               <a
                 href="mailto:ant.stark@hotmail.com"
                 className="flex items-center gap-2 px-4 py-2 rounded-lg bg-primary/10 border border-primary/30 hover:border-primary hover:bg-primary/20 transition-all duration-300 text-sm font-medium"
