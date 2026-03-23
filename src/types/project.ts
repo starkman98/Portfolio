@@ -5,5 +5,6 @@ export type Project = {
   githubUrl: string;
   imgPath: string;
   imgAlt: string;
+  schoolAssignment: boolean;
   liveUrl?: string;
 };

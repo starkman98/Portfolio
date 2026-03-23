@@ -1,6 +1,7 @@
 import Hero from "./components/Hero";
 import About from "./components/About";
 import Skills from "./components/Skills";
+import Homelab from "./components/Homelab";
 import Projects from "./components/Projects";
 import Contact from "./components/Contact";
 import Navbar from "./components/Navbar";
@@ -13,6 +14,7 @@ function App() {
       <Hero />
       <About />
       <Skills />
+      <Homelab />
       <Projects />
       <Contact />
       <Footer />

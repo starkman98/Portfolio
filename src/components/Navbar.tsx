@@ -1,10 +1,14 @@
 import { useState } from "react";
 import { LuX } from "react-icons/lu";
 import { MdMenu } from "react-icons/md";
+import { LuDownload } from "react-icons/lu";
+
+const cvUrl = `${import.meta.env.BASE_URL}Anton-Stark-CV.pdf`;
 
 const navLinks = [
   { label: "About", href: "#about" },
   { label: "Skills", href: "#skills" },
+  { label: "Homelab", href: "#homelab" },
   { label: "Projects", href: "#projects" },
   { label: "Contact", href: "#contact" },
 ];
@@ -34,12 +38,20 @@ const Navbar = () => {
               <span className="absolute -bottom-1 left-0 w-0 h-px bg-primary transition-all duration-300 group-hover:w-full" />
             </a>
           ))}
+          <a
+            href={cvUrl}
+            download
+            className="inline-flex items-center gap-2 px-3 py-1.5 rounded-lg border border-primary/40 bg-primary/10 text-sm font-medium text-primary hover:border-primary hover:bg-primary/20 transition-all duration-300"
+          >
+            <LuDownload className="w-3.5 h-3.5" />
+            CV
+          </a>
         </nav>
         <button
           type="button"
           onClick={() => setIsOpen((prev) => !prev)}
           className="rounded-lg border border-neutral-800 p-2 text-neutral-300 transition hover:text-white md:hidden"
-          aria-label={isOpen ? "stäng meny" : "Öppna meny"}
+          aria-label={isOpen ? "Close menu" : "Open menu"}
           aria-expanded={isOpen}
         >
           {isOpen ? (
@@ -63,6 +75,15 @@ const Navbar = () => {
                 {link.label}
               </a>
             ))}
+            <a
+              href={cvUrl}
+              download
+              className="inline-flex items-center gap-2 text-primary hover:text-primary/80 transition-colors"
+              onClick={() => setIsOpen(false)}
+            >
+              <LuDownload className="w-4 h-4" />
+              Download CV
+            </a>
           </nav>
         </div>
       )}
