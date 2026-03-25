@@ -19,7 +19,7 @@ const Contact = () => {
           </p>
 
           {/* Primary CTA */}
-          <div className="flex justify-center mb-8 gap-8">
+          <div className="flex flex-col md:flex-row justify-center mb-8 gap-8">
             <a
               href="mailto:ant.stark@hotmail.com"
               className="group flex items-center justify-center gap-3 px-8 py-4 rounded-xl bg-primary text-neutral-950 font-semibold hover:opacity-90 hover:shadow-[0_20px_50px_-25px_hsl(210_85%_58%_/_0.6)] transition-all duration-300"

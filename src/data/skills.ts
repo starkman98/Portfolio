@@ -3,11 +3,6 @@ export interface Skill {
   icon: string;
 }
 
-// export interface SkillGroup {
-//   category: string;
-//   skills: Skill[];
-// }
-
 export const coreSkills: Skill[] = [
   { name: "C# / .NET", icon: "code" },
   { name: "ASP.NET Core", icon: "server" },
@@ -20,6 +15,7 @@ export const coreSkills: Skill[] = [
   { name: "WPF / XAML", icon: "code" },
   { name: "MVVM / DI", icon: "server" },
   { name: "Git & GitHub", icon: "globe" },
+  { name: "Copilot CLI", icon: "terminalfill" },
   { name: "Node.js", icon: "server" },
 ];
 
@@ -28,7 +24,6 @@ export const softSkills: Skill[] = [
   { name: "Self-driven", icon: "rocket" },
   { name: "Self-hosting", icon: "server" },
   { name: "Problem Solving", icon: "lightbulb" },
-  { name: "Homelab / DevOps", icon: "cpu" },
   { name: "Precision & Detail", icon: "shield" },
   { name: "Responsible & reliable", icon: "checkcircle" },
 ];

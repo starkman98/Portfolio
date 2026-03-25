@@ -10,6 +10,7 @@ import {
   BsCheckCircle,
   BsRocket,
   BsListCheck,
+  BsTerminalFill,
 } from "react-icons/bs";
 
 const iconMap: Record<string, React.ComponentType<{ className?: string }>> = {
@@ -23,6 +24,7 @@ const iconMap: Record<string, React.ComponentType<{ className?: string }>> = {
   checkcircle: BsCheckCircle,
   rocket: BsRocket,
   listcheck: BsListCheck,
+  terminalfill: BsTerminalFill,
 };
 
 const Skills = () => {
@@ -48,7 +50,7 @@ const Skills = () => {
                 return (
                   <div
                     key={skill.name}
-                    className="group relative p-4 rounded-xl border bg-primary/10 border-primary/30 hover:border-primary hover:bg-primary/20 transition-all duration-300 cursor-default"
+                    className="group relative p-4 rounded-xl border bg-primary/10 border-primary/30 cursor-default"
                   >
                     <div className="flex items-center gap-3">
                       <Icon className="w-5 h-5 text-primary shrink-0" />
@@ -74,7 +76,7 @@ const Skills = () => {
                   return (
                     <span
                       key={skill.name}
-                      className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/10 border border-primary/30 text-sm font-medium hover:border-primary hover:bg-primary/20 transition-all duration-300 cursor-default"
+                      className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/10 border border-primary/30 text-sm font-medium cursor-default"
                     >
                       <Icon className="w-4 h-4 text-primary" />
                       {skill.name}
@@ -92,7 +94,7 @@ const Skills = () => {
                 {languages.map((item) => (
                   <span
                     key={item.lang}
-                    className="px-4 py-2 rounded-full bg-primary/10 border border-primary/30 text-sm font-medium hover:border-primary hover:bg-primary/20 transition-all duration-300 cursor-default"
+                    className="px-4 py-2 rounded-full bg-primary/10 border border-primary/30 text-sm font-medium cursor-default"
                   >
                     <span className="text-white">{item.lang}</span>
                     <span className="text-neutral-400 ml-1">

@@ -107,7 +107,7 @@ const Homelab = () => {
             {techStack.map((tech) => (
               <span
                 key={tech}
-                className="rounded-full border border-primary/30 bg-primary/10 px-4 py-1.5 text-sm font-medium text-primary/80 hover:border-primary hover:bg-primary/20 transition-all duration-300 cursor-default"
+                className="rounded-full border border-primary/30 bg-primary/10 px-4 py-1.5 text-sm font-medium text-primary/80 cursor-default"
               >
                 {tech}
               </span>
