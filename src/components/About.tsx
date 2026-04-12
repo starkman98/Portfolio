@@ -10,7 +10,7 @@ const About = () => {
           From CNC and CAD/CAM to .NET-developer
         </h2>
 
-        <div className="mt-6 max-w-3xl space-y-4 text-neutral-300">
+        <div className="mt-6 max-w-3xl space-y-4 text-neutral-400">
           <p>
             I'm studying .NET-development and have already worked with .NET, C#,
             ASP.NET CORE, SQL, NoSQL, React, Typescript, Javascript, HTML, CSS.

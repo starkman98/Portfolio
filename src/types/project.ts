@@ -3,8 +3,6 @@ export type Project = {
   description: string;
   tech: string[];
   githubUrl: string;
-  imgPath: string;
-  imgAlt: string;
   schoolAssignment: boolean;
   liveUrl?: string;
 };
