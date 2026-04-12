@@ -16,22 +16,9 @@ const Projects = () => {
           {projects.map((project) => (
             <article
               key={project.title}
-              className="overflow-hidden rounded-2xl border border-neutral-800 bg-neutral-900/50 p-6 hover:border-primary/50 hover:bg-primary/5 transition-all duration-300"
+              className="overflow-hidden rounded-2xl p-6 border border-neutral-800 bg-neutral-900/50 cursor-default"
             >
-              <div className="aspect-video w-full overflow-hidden rounded-xl">
-                <a
-                  href={project.imgPath}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  <img
-                    src={project.imgPath}
-                    alt={project.imgAlt}
-                    className="h-full w-full"
-                  />
-                </a>
-              </div>
-              <h3 className="mt-4 text-base font-bold leading-6 text-white">
+              <h3 className="mt-4 text-xl font-bold leading-6 text-white">
                 {project.title}
               </h3>
               <p className="mt-2 text-sm leading-6 text-neutral-400">

@@ -4,6 +4,17 @@
 @theme {
   --color-primary: #3b9eff;
   --color-primary-foreground: #0d1a2e;
+
+  --color-bg: #151922;
+  --color-bg-card: #1a1d21;
+
+  --color-border: #2a2d32;
+
+  --color-accent: #0ea5e9;
+
+  --color-text: #e2e8f0;
+  --color-text-muted: #8892a4;
+
   --font-sans: "Inter", system-ui, sans-serif;
   --font-mono: "JetBrains Mono", monospace;
 }
@@ -25,22 +36,9 @@ body {
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-color: hsl(214, 30%, 10%);
-  color: hsl(210, 30%, 96%);
+  background-color: var(--color-bg);
+  color: var(--color-text);
   position: relative;
-  background-image:
-    radial-gradient(
-      1200px 600px at 15% -10%,
-      hsl(210 85% 58% / 0.12),
-      transparent
-    ),
-    radial-gradient(
-      1000px 500px at 85% 0%,
-      hsl(200 80% 55% / 0.1),
-      transparent
-    ),
-    linear-gradient(hsl(210 30% 96% / 0.04) 1px, transparent 1px),
-    linear-gradient(90deg, hsl(210 30% 96% / 0.04) 1px, transparent 1px);
   background-size:
     auto,
     auto,
@@ -103,15 +101,6 @@ button:focus-visible {
   outline-offset: 2px;
 }
 
-/* ── Layout utilities ── */
-.section-container {
-  max-width: 64rem;
-  margin-left: auto;
-  margin-right: auto;
-  padding-left: 1.5rem;
-  padding-right: 1.5rem;
-}
-
 @media (min-width: 768px) {
   .section-container {
     padding-left: 2rem;
@@ -151,63 +140,4 @@ button:focus-visible {
     hsl(210 85% 58% / 0.22),
     transparent
   );
-}
-
-/* ── Animations ── */
-@keyframes fade-up {
-  from {
-    opacity: 0;
-    transform: translateY(24px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-@keyframes float {
-  0%,
-  100% {
-    transform: translateY(0px);
-  }
-  50% {
-    transform: translateY(-8px);
-  }
-}
-
-@keyframes pulse-subtle {
-  0%,
-  100% {
-    opacity: 1;
-  }
-  50% {
-    opacity: 0.6;
-  }
-}
-
-.animate-fade-up {
-  animation: fade-up 0.8s ease-out forwards;
-}
-
-.animate-fade-up-delay {
-  animation: fade-up 0.8s ease-out 0.2s forwards;
-  opacity: 0;
-}
-
-.animate-fade-up-delay-2 {
-  animation: fade-up 0.8s ease-out 0.4s forwards;
-  opacity: 0;
-}
-
-.animate-float {
-  animation: float 6s ease-in-out infinite;
-}
-
-.animate-pulse-subtle {
-  animation: pulse-subtle 3s ease-in-out infinite;
-}
-
-::selection {
-  background-color: hsl(210 85% 58% / 0.3);
-  color: hsl(210 30% 96%);
 }

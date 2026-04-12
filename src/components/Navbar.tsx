@@ -41,9 +41,9 @@ const Navbar = () => {
           <a
             href={cvUrl}
             download
-            className="inline-flex items-center gap-2 px-3 py-1.5 rounded-lg border border-primary/40 bg-primary/10 text-sm font-medium text-primary hover:border-primary hover:bg-primary/20 transition-all duration-300"
+            className="inline-flex items-center gap-2 px-3 py-1.5 rounded-lg border border-neutral-700 bg-neutral-900/50 hover:border-primary hover:bg-primary/20 text-sm font-medium  transition-all duration-300"
           >
-            <LuDownload className="w-3.5 h-3.5" />
+            <LuDownload className="w-3.5 h-3.5 text-primary" />
             CV
           </a>
         </nav>
