@@ -16,40 +16,44 @@ const Projects = () => {
           {projects.map((project) => (
             <article
               key={project.title}
-              className="overflow-hidden rounded-2xl p-6 border border-neutral-800 bg-neutral-900/50 cursor-default"
+              className="overflow-hidden flex flex-col justify-between rounded-2xl p-6 border border-neutral-800 bg-neutral-900/50 cursor-default"
             >
-              <h3 className="mt-4 text-xl font-bold leading-6 text-white">
-                {project.title}
-              </h3>
-              <p className="mt-2 text-sm leading-6 text-neutral-400">
-                {project.description}
-              </p>
-              <div className="mt-4 flex flex-wrap gap-2">
-                {project.tech.map((item) => (
-                  <span
-                    key={item}
-                    className="rounded-full border border-primary/30 bg-primary/10 px-3 py-1 text-xs text-primary/80"
-                  >
-                    {item}
-                  </span>
-                ))}
+              <div>
+                <h3 className="mt-4 text-xl font-bold leading-6 text-white">
+                  {project.title}
+                </h3>
+                <p className="mt-2 text-sm leading-6 text-neutral-400">
+                  {project.description}
+                </p>
               </div>
-              <div className="flex justify-between">
-                <a
-                  href={project.githubUrl}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="mt-6 inline-flex items-center gap-2 text-sm font-medium text-white hover:text-primary transition-colors duration-200"
-                >
-                  <BsGithub className="w-4 h-4" />
-                  <span>View on GitHub</span>
-                </a>
+              <div>
+                <div className="mt-4 flex flex-wrap gap-2">
+                  {project.tech.map((item) => (
+                    <span
+                      key={item}
+                      className="rounded-full border border-primary/30 bg-primary/10 px-3 py-1 text-xs text-primary/80"
+                    >
+                      {item}
+                    </span>
+                  ))}
+                </div>
+                <div className="flex justify-between">
+                  <a
+                    href={project.githubUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="mt-6 inline-flex items-center gap-2 text-sm font-medium text-white hover:text-primary transition-colors duration-200"
+                  >
+                    <BsGithub className="w-4 h-4" />
+                    <span>View on GitHub</span>
+                  </a>
 
-                {project.schoolAssignment ? (
-                  <span className="mt-6 rounded-full border border-primary/30 bg-primary/10 px-3 py-1 text-xs text-primary/80">
-                    School assignment
-                  </span>
-                ) : null}
+                  {project.schoolAssignment ? (
+                    <span className="mt-6 rounded-full border border-primary/30 bg-primary/10 px-3 py-1 text-xs text-primary/80">
+                      School assignment
+                    </span>
+                  ) : null}
+                </div>
               </div>
             </article>
           ))}

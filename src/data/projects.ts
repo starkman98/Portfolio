@@ -2,6 +2,25 @@ import type { Project } from "../types/project";
 
 export const projects: Project[] = [
   {
+    title: "FishingLog",
+    description:
+      "FishingLog is a full-stack mobile and backend application where users can log fishing trips, catches, and conditions. The project is built with a strong focus on clean architecture, real-world backend design, and an offline-first approach, where data is stored locally and later synchronized with the API.",
+    tech: [
+      "C#",
+      ".NET",
+      "ASP.NET Core",
+      ".NET MAUI",
+      "PostgreSQL",
+      "SQLite",
+      "EF Core",
+      "Docker",
+      "REST API",
+      "xUnit",
+    ],
+    githubUrl: "https://github.com/starkman98/FishingLog",
+    schoolAssignment: false,
+  },
+  {
     title: "TwitchWatcher",
     description:
       "A project mainly for learning WPF and using APIs in C#, it's monitoring twitch channels and opening them in a browser to earn points if they're live.",
